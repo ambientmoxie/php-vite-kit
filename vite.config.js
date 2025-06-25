@@ -10,7 +10,8 @@ const isHost = process.env.VITE_ENV_MODE === "host";
 
 export default defineConfig({
   // Set base path for built assets (used in production)
-  base: isDev || isHost ? "" : `${process.env.VITE_ROOT}/build/bundle`,
+  base: isDev || isHost ? "" : `/build/bundle`,
+  publicDir: false, // ✅ prevent recursive copying of public/
 
   server: {
     // Use local IP if host mode, else localhost
@@ -26,6 +27,7 @@ export default defineConfig({
   plugins: [fullReload(["**/*.php"])],
 
   build: {
+    outDir: "public/build/bundle", // ✅ build output goes here
     // Disable base64 inlining for assets like fonts
     assetsInlineLimit: 0,
 
@@ -41,7 +43,6 @@ export default defineConfig({
     },
 
     manifest: true, // Generates manifest.json for PHP
-    outDir: "./build/bundle", // Output folder for production build
     emptyOutDir: true, // Clean build folder before building
   },
 
