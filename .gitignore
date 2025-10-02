@@ -1,0 +1,26 @@
+# Vite generated folder
+# ----------------------
+
+/build
+
+# Modules folder
+# ----------------------
+
+node_modules
+vendor
+
+# Session
+# ----------------------
+sessions/
+
+# Miscellaneous
+# ----------------------
+
+*.zip
+*.rar
+*.psd
+*.indd
+*.ai
+.env
+.DS_Store
+

@@ -1,0 +1,13 @@
+{
+    "name": "starterkit/php-node",
+    "description": "starterkit/php-node",
+    "require": {
+        "php": ">=8.0.0",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "authors": [
+        {
+            "name": "maxime benoit"
+        }
+    ]
+}

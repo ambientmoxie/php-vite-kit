@@ -1,0 +1,27 @@
+{
+  "name": "starterkit-php-node",
+  "description": "starterkit/php-node",
+  "type": "module",
+  "scripts": {
+    "vite:dev": "VITE_ENV_MODE=dev vite",
+    "vite:host": "VITE_ENV_MODE=host vite",
+    "vite:build": "VITE_ENV_MODE=build vite build",
+    "server:local": "php -S localhost:8888 -t public",
+    "server:host": "php -S $(node scripts/get-ip.mjs):8888 -t public",
+    "dev": "node scripts/set-env.mjs && concurrently \"npm run server:local\" \"npm run vite:dev\" -c yellow,green",
+    "host": "node scripts/set-env.mjs && concurrently \"npm run server:host\" \"npm run vite:host\" -c yellow,green",
+    "build": "node scripts/set-env.mjs && npm run vite:build",
+    "preview": "concurrently \"npm run build\" \"npm run server:local\" -c yellow,green"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "vite": "^5.4.10",
+    "vite-plugin-full-reload": "^1.2.0",
+    "concurrently": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "sass": "^1.86.3"
+  }
+}

@@ -1,0 +1,12 @@
+# If your homepage is http://yourdomain.com/mysite,
+# set the RewriteBase to:
+#
+# RewriteBase /mysite
+RewriteEngine On
+RewriteBase /
+
+# Makes site links work. 
+# Same idea as the logic in router.php 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

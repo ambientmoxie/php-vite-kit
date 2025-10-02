@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  font-synthesis: none !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 2rem;
+  color: white;
+  font-size: 2.8rem;
+  background-color: green;
+  font-family: "PicNic", Arial, Helvetica, sans-serif;
+}
